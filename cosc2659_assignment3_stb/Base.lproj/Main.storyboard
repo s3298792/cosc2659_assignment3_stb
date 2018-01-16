@@ -130,7 +130,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-8u-SWl">
                                 <state key="normal" title="Home"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="oCy-Ty-ome"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="Home" id="oCy-Ty-ome"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiC-3M-DiG">

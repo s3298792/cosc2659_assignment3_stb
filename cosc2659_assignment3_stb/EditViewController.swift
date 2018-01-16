@@ -27,7 +27,6 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -42,6 +41,18 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: categories.count-1, section: 0)], with: .automatic)
         tableView.endUpdates()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "Home":
+            let destination = segue.destination as! HomeViewController
+            destination.categories = categories
+        default:
+            return
+        }
     }
     
 

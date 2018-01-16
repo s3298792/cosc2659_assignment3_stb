@@ -27,11 +27,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let category1 = Category(name: "Leisure", amount: 100000)
-        let category2 = Category(name: "Love", amount: 300000)
-        let category3 = Category(name: "Social", amount: 200000)
-        categories += [category1, category2, category3]
     }
 
     override func didReceiveMemoryWarning() {
