@@ -36,7 +36,10 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        budgetTextField.text = String(budget)
         budgetTextField.delegate = self
+        totalExpenseLabel.text = String(totalExpense) + " vnd"
+        balanceLabel.text = String(balance) + " vnd"
     }
 
     override func didReceiveMemoryWarning() {
