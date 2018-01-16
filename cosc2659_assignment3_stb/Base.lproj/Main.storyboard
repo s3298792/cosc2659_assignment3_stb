@@ -1,26 +1,131 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cosc2659_assignment3_stb" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Month Budget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSu-r7-pOu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WH-4i-jM3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-bd-7oX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-p3-WvM">
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <segue destination="nv7-i1-tLM" kind="show" id="ns1-SN-FNq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEP-0G-JR3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WoU-bd-7oX" firstAttribute="trailing" secondItem="8WH-4i-jM3" secondAttribute="trailing" id="13g-S2-nGP"/>
+                            <constraint firstItem="DSu-r7-pOu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4WX-ng-1dm"/>
+                            <constraint firstItem="8WH-4i-jM3" firstAttribute="trailing" secondItem="DSu-r7-pOu" secondAttribute="trailing" id="7xi-LA-0Kd"/>
+                            <constraint firstItem="XEP-0G-JR3" firstAttribute="leading" secondItem="8WH-4i-jM3" secondAttribute="leading" id="9gm-jP-KlD"/>
+                            <constraint firstItem="8WH-4i-jM3" firstAttribute="leading" secondItem="DSu-r7-pOu" secondAttribute="leading" id="FWx-8k-5Yk"/>
+                            <constraint firstItem="XEP-0G-JR3" firstAttribute="top" secondItem="8WH-4i-jM3" secondAttribute="bottom" constant="8" symbolic="YES" id="KoE-he-8La"/>
+                            <constraint firstItem="nEW-p3-WvM" firstAttribute="trailing" secondItem="WoU-bd-7oX" secondAttribute="trailing" id="aYB-mc-5ko"/>
+                            <constraint firstItem="WoU-bd-7oX" firstAttribute="baseline" secondItem="XEP-0G-JR3" secondAttribute="baseline" id="f4h-Rv-gBa"/>
+                            <constraint firstItem="DSu-r7-pOu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oYT-pe-YVM"/>
+                            <constraint firstAttribute="bottom" secondItem="nEW-p3-WvM" secondAttribute="bottom" constant="20" symbolic="YES" id="qHv-Vg-cea"/>
+                            <constraint firstItem="DSu-r7-pOu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ujK-qF-1CC"/>
+                            <constraint firstItem="8WH-4i-jM3" firstAttribute="top" secondItem="DSu-r7-pOu" secondAttribute="bottom" constant="8" symbolic="YES" id="wbh-bY-iQd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-426.39999999999998" y="120.98950524737631"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wGB-mT-1QV">
+            <objects>
+                <viewController id="nv7-i1-tLM" customClass="ViewController" customModule="cosc2659_assignment3_stb" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="275-Wd-P11"/>
+                        <viewControllerLayoutGuide type="bottom" id="LPi-2S-0JW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="580-Qv-9dI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Month Budget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RM-9q-tDa">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdD-5r-g1F">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JF-Zx-nef">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-8u-SWl">
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oCy-Ty-ome"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiC-3M-DiG">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0JF-Zx-nef" firstAttribute="baseline" secondItem="aiC-3M-DiG" secondAttribute="baseline" id="09w-qC-rHm"/>
+                            <constraint firstItem="KdD-5r-g1F" firstAttribute="leading" secondItem="8RM-9q-tDa" secondAttribute="leading" id="0eQ-92-pDo"/>
+                            <constraint firstItem="cw5-8u-SWl" firstAttribute="trailing" secondItem="0JF-Zx-nef" secondAttribute="trailing" id="ExD-D1-xDO"/>
+                            <constraint firstAttribute="bottom" secondItem="cw5-8u-SWl" secondAttribute="bottom" constant="20" symbolic="YES" id="FUi-9o-aQ7"/>
+                            <constraint firstItem="aiC-3M-DiG" firstAttribute="top" secondItem="KdD-5r-g1F" secondAttribute="bottom" constant="8" symbolic="YES" id="Fi0-6N-8Mk"/>
+                            <constraint firstItem="8RM-9q-tDa" firstAttribute="trailing" secondItem="580-Qv-9dI" secondAttribute="trailingMargin" id="Q80-Xl-xEs"/>
+                            <constraint firstItem="KdD-5r-g1F" firstAttribute="trailing" secondItem="8RM-9q-tDa" secondAttribute="trailing" id="RDP-L5-LJx"/>
+                            <constraint firstItem="8RM-9q-tDa" firstAttribute="leading" secondItem="580-Qv-9dI" secondAttribute="leadingMargin" id="cU9-6l-dYn"/>
+                            <constraint firstItem="KdD-5r-g1F" firstAttribute="top" secondItem="8RM-9q-tDa" secondAttribute="bottom" constant="8" symbolic="YES" id="eKv-5z-Lgg"/>
+                            <constraint firstItem="8RM-9q-tDa" firstAttribute="top" secondItem="275-Wd-P11" secondAttribute="bottom" id="ef9-tY-VlX"/>
+                            <constraint firstItem="aiC-3M-DiG" firstAttribute="leading" secondItem="KdD-5r-g1F" secondAttribute="leading" id="hqY-4f-sSp"/>
+                            <constraint firstItem="0JF-Zx-nef" firstAttribute="trailing" secondItem="KdD-5r-g1F" secondAttribute="trailing" id="mqS-rq-y9W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBI-V1-7Bg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="121"/>
         </scene>
     </scenes>
 </document>
