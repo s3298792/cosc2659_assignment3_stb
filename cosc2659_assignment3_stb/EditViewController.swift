@@ -8,9 +8,15 @@
 
 import UIKit
 
-class EditViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CellDelegate {
+class EditViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CellDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var budgetTextField: UITextField!
+    @IBOutlet weak var totalExpenseLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    var budget: Int!
+    var totalExpense: Int!
+    var balance: Int!
     var categories: [Category]!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,11 +35,24 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        budgetTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @IBAction func budgetTextFieldEditingDidEnd(_ sender: UITextField) {
+        budget = Int(budgetTextField.text!)
+        balance = budget - totalExpense
+        balanceLabel.text = String(balance) + " vnd"
     }
     
     @IBAction func addButtonClick(_ sender: UIButton) {
@@ -54,6 +73,9 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let indexPath = tableView.indexPath(for: cell)!
         let editedCategory = categories[indexPath.row]
         editedCategory.amount = amount
+        calculateTotalExpense()
+        balance = budget - totalExpense
+        balanceLabel.text = String(balance) + " vnd"
     }
     
     func deleteButtonClick(cell: EditTableViewCell) {
@@ -62,6 +84,9 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.beginUpdates()
         tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .automatic)
         tableView.endUpdates()
+        calculateTotalExpense()
+        balance = budget - totalExpense
+        balanceLabel.text = String(balance) + " vnd"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,10 +95,21 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch(segue.identifier ?? "") {
         case "Home":
             let destination = segue.destination as! HomeViewController
+            destination.budget = budget
+            destination.totalExpense = totalExpense
+            destination.balance = balance
             destination.categories = categories
         default:
             return
         }
+    }
+    
+    private func calculateTotalExpense() {
+        totalExpense = 0
+        for category in categories {
+            totalExpense = totalExpense + category.amount
+        }
+        totalExpenseLabel.text = String(totalExpense) + " vnd"
     }
     
 

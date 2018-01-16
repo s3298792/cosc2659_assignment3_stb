@@ -105,6 +105,11 @@
                             <constraint firstItem="8WH-4i-jM3" firstAttribute="top" secondItem="DSu-r7-pOu" secondAttribute="bottom" constant="8" symbolic="YES" id="wbh-bY-iQd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="WoU-bd-7oX" id="WNy-bp-pHs"/>
+                        <outlet property="budgetLabel" destination="8WH-4i-jM3" id="FIq-VF-Myz"/>
+                        <outlet property="totalExpenseLabel" destination="XEP-0G-JR3" id="naN-8C-ygf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,6 +223,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="budgetTextFieldEditingDidEnd:" destination="nv7-i1-tLM" eventType="editingDidEnd" id="qOp-gI-ABS"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0JF-Zx-nef">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -248,7 +256,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="balanceLabel" destination="0JF-Zx-nef" id="23f-cz-WbR"/>
+                        <outlet property="budgetTextField" destination="cMn-Jq-fPC" id="JdL-nb-ZYP"/>
                         <outlet property="tableView" destination="Cj5-fp-mMX" id="kfF-By-PsL"/>
+                        <outlet property="totalExpenseLabel" destination="aiC-3M-DiG" id="VGH-cE-I79"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBI-V1-7Bg" sceneMemberID="firstResponder"/>

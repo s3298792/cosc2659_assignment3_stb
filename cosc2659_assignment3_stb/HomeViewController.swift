@@ -10,6 +10,12 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var totalExpenseLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
+    var budget: Int!
+    var totalExpense: Int!
+    var balance: Int!
     var categories = [Category]()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,6 +33,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if(budget == nil) {
+            budget = 0
+        }
+        budgetLabel.text = String(budget) + " vnd"
+        
+        if(totalExpense == nil) {
+            totalExpense = 0
+        }
+        totalExpenseLabel.text = String(totalExpense) + " vnd"
+        
+        if(balance == nil) {
+            balance = 0
+        }
+        balanceLabel.text = String(balance) + " vnd"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +61,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         switch(segue.identifier ?? "") {
         case "Edit":
             let destination = segue.destination as! EditViewController
+            destination.budget = budget
+            destination.totalExpense = totalExpense
+            destination.balance = balance
             destination.categories = categories
         default:
             return
