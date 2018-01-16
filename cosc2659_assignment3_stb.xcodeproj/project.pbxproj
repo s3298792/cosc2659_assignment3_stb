@@ -14,6 +14,8 @@
 		39E88C05200DD9C70023B593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E88C03200DD9C70023B593 /* LaunchScreen.storyboard */; };
 		39E88C0D200DFE0C0023B593 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C0C200DFE0C0023B593 /* Category.swift */; };
 		39E88C11200E14C80023B593 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C10200E14C80023B593 /* HomeTableViewCell.swift */; };
+		39E88C13200E28080023B593 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C12200E28080023B593 /* EditViewController.swift */; };
+		39E88C15200E2B060023B593 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C14200E2B060023B593 /* EditTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		39E88C06200DD9C70023B593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E88C0C200DFE0C0023B593 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		39E88C10200E14C80023B593 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		39E88C12200E28080023B593 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		39E88C14200E2B060023B593 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				39E88BFA200DD9C70023B593 /* AppDelegate.swift */,
+				39E88C14200E2B060023B593 /* EditTableViewCell.swift */,
+				39E88C12200E28080023B593 /* EditViewController.swift */,
 				39E88C10200E14C80023B593 /* HomeTableViewCell.swift */,
 				39E88BFC200DD9C70023B593 /* HomeViewController.swift */,
 				39E88BFE200DD9C70023B593 /* Main.storyboard */,
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E88C13200E28080023B593 /* EditViewController.swift in Sources */,
 				39E88BFD200DD9C70023B593 /* HomeViewController.swift in Sources */,
 				39E88C11200E14C80023B593 /* HomeTableViewCell.swift in Sources */,
+				39E88C15200E2B060023B593 /* EditTableViewCell.swift in Sources */,
 				39E88BFB200DD9C70023B593 /* AppDelegate.swift in Sources */,
 				39E88C0D200DFE0C0023B593 /* Category.swift in Sources */,
 			);

@@ -38,6 +38,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "Edit":
+            let destination = segue.destination as! EditViewController
+            destination.categories = categories
+        default:
+            return
+        }
+    }
 
 
 }
