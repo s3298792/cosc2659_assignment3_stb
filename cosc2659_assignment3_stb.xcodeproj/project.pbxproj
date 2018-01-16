@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		39E88BFB200DD9C70023B593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BFA200DD9C70023B593 /* AppDelegate.swift */; };
-		39E88BFD200DD9C70023B593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BFC200DD9C70023B593 /* ViewController.swift */; };
+		39E88BFD200DD9C70023B593 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BFC200DD9C70023B593 /* HomeViewController.swift */; };
 		39E88C00200DD9C70023B593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E88BFE200DD9C70023B593 /* Main.storyboard */; };
 		39E88C02200DD9C70023B593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E88C01200DD9C70023B593 /* Assets.xcassets */; };
 		39E88C05200DD9C70023B593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E88C03200DD9C70023B593 /* LaunchScreen.storyboard */; };
 		39E88C0D200DFE0C0023B593 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C0C200DFE0C0023B593 /* Category.swift */; };
+		39E88C11200E14C80023B593 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88C10200E14C80023B593 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39E88BF7200DD9C70023B593 /* cosc2659_assignment3_stb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cosc2659_assignment3_stb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E88BFA200DD9C70023B593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39E88BFC200DD9C70023B593 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39E88BFC200DD9C70023B593 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		39E88BFF200DD9C70023B593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39E88C01200DD9C70023B593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E88C04200DD9C70023B593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39E88C06200DD9C70023B593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E88C0C200DFE0C0023B593 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		39E88C10200E14C80023B593 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				39E88BFA200DD9C70023B593 /* AppDelegate.swift */,
-				39E88BFC200DD9C70023B593 /* ViewController.swift */,
+				39E88C10200E14C80023B593 /* HomeTableViewCell.swift */,
+				39E88BFC200DD9C70023B593 /* HomeViewController.swift */,
 				39E88BFE200DD9C70023B593 /* Main.storyboard */,
 				39E88C01200DD9C70023B593 /* Assets.xcassets */,
 				39E88C03200DD9C70023B593 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E88BFD200DD9C70023B593 /* ViewController.swift in Sources */,
+				39E88BFD200DD9C70023B593 /* HomeViewController.swift in Sources */,
+				39E88C11200E14C80023B593 /* HomeTableViewCell.swift in Sources */,
 				39E88BFB200DD9C70023B593 /* AppDelegate.swift in Sources */,
 				39E88C0D200DFE0C0023B593 /* Category.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				39E88C0B200DD9C70023B593 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
