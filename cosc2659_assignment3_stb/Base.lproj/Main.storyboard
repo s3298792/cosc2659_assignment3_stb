@@ -155,12 +155,18 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="amountTextFieldEditingDidEnd:" destination="Fo3-5P-0mi" eventType="editingDidEnd" id="XJp-9t-Vfn"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaN-Wn-uHc">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="45" id="v7J-Au-wIN"/>
                                                     </constraints>
                                                     <state key="normal" title="Delete"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonClick:" destination="Fo3-5P-0mi" eventType="touchUpInside" id="BwI-B8-yY4"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vnd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA9-sR-lQm">
                                                     <constraints>
@@ -174,6 +180,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="nameTextFieldEditingDidEnd:" destination="Fo3-5P-0mi" eventType="editingDidEnd" id="8sM-fa-loe"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>

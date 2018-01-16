@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39E3F83F200E47C500E460D5 /* CellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3F83E200E47C500E460D5 /* CellDelegate.swift */; };
 		39E88BFB200DD9C70023B593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BFA200DD9C70023B593 /* AppDelegate.swift */; };
 		39E88BFD200DD9C70023B593 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E88BFC200DD9C70023B593 /* HomeViewController.swift */; };
 		39E88C00200DD9C70023B593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E88BFE200DD9C70023B593 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39E3F83E200E47C500E460D5 /* CellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDelegate.swift; sourceTree = "<group>"; };
 		39E88BF7200DD9C70023B593 /* cosc2659_assignment3_stb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cosc2659_assignment3_stb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E88BFA200DD9C70023B593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39E88BFC200DD9C70023B593 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				39E88C03200DD9C70023B593 /* LaunchScreen.storyboard */,
 				39E88C06200DD9C70023B593 /* Info.plist */,
 				39E88C0C200DFE0C0023B593 /* Category.swift */,
+				39E3F83E200E47C500E460D5 /* CellDelegate.swift */,
 			);
 			path = cosc2659_assignment3_stb;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				39E88C13200E28080023B593 /* EditViewController.swift in Sources */,
 				39E88BFD200DD9C70023B593 /* HomeViewController.swift in Sources */,
+				39E3F83F200E47C500E460D5 /* CellDelegate.swift in Sources */,
 				39E88C11200E14C80023B593 /* HomeTableViewCell.swift in Sources */,
 				39E88C15200E2B060023B593 /* EditTableViewCell.swift in Sources */,
 				39E88BFB200DD9C70023B593 /* AppDelegate.swift in Sources */,

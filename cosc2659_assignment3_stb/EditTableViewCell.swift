@@ -12,6 +12,7 @@ class EditTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
+    var delegate: CellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +24,18 @@ class EditTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func nameTextFieldEditingDidEnd(_ sender: UITextField) {
+        delegate!.nameTextFieldEditingDidEnd(cell: self, name: nameTextField.text!)
+    }
+    
+    @IBAction func amountTextFieldEditingDidEnd(_ sender: UITextField) {
+        delegate!.amountTextFieldEditingDidEnd(cell: self, amount: Int(amountTextField.text!)!)
+    }
+    
+    @IBAction func deleteButtonClick(_ sender: UIButton) {
+        delegate!.deleteButtonClick(cell: self)
+    }
+    
+    
 }
