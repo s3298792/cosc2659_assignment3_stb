@@ -21,7 +21,7 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
-    }
+    }       //check the number of item in the categories which will show in the table view
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EditTableViewCell
@@ -38,7 +38,9 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         budgetTextField.text = String(budget)
         budgetTextField.delegate = self
+         //display the total expense
         totalExpenseLabel.text = String(totalExpense) + " vnd"
+        //display the balance
         balanceLabel.text = String(balance) + " vnd"
     }
 
@@ -53,13 +55,13 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func budgetTextFieldEditingDidEnd(_ sender: UITextField) {
-        budget = Int(budgetTextField.text!)
-        balance = budget - totalExpense
-        balanceLabel.text = String(balance) + " vnd"
+        budget = Int(budgetTextField.text!)            //change the budgetTextField from text to integer
+        balance = budget - totalExpense                //caculate the balance
+        balanceLabel.text = String(balance) + " vnd"    //display the balance
     }
-    
+    //function add new item for the expense
     @IBAction func addButtonClick(_ sender: UIButton) {
-        let newCategory = Category(name: "New Name", amount: 0)
+        let newCategory = Category(name: "New Expense", amount: 0)
         categories.append(newCategory)
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: categories.count-1, section: 0)], with: .automatic)
@@ -68,7 +70,7 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func nameTextFieldEditingDidEnd(cell: EditTableViewCell, name: String) {
         let indexPath = tableView.indexPath(for: cell)!
-        let editedCategory = categories[indexPath.row]
+        let editedCategory = categories[indexPath.row]        //change the item of the category to row
         editedCategory.name = name
     }
     
@@ -77,10 +79,10 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let editedCategory = categories[indexPath.row]
         editedCategory.amount = amount
         calculateTotalExpense()
-        balance = budget - totalExpense
-        balanceLabel.text = String(balance) + " vnd"
+        balance = budget - totalExpense                        //caculate the balance
+        balanceLabel.text = String(balance) + " vnd"           //display the balance
     }
-    
+    //function for delete an item in category
     func deleteButtonClick(cell: EditTableViewCell) {
         let indexPath = tableView.indexPath(for: cell)!
         categories.remove(at: indexPath.row)
@@ -88,8 +90,8 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deleteRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .automatic)
         tableView.endUpdates()
         calculateTotalExpense()
-        balance = budget - totalExpense
-        balanceLabel.text = String(balance) + " vnd"
+        balance = budget - totalExpense                     //caculate the balance
+        balanceLabel.text = String(balance) + " vnd"           //display the balance
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,13 +108,13 @@ class EditViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return
         }
     }
-    
+    //function for caculate the whole expense
     private func calculateTotalExpense() {
         totalExpense = 0
         for category in categories {
-            totalExpense = totalExpense + category.amount
+            totalExpense = totalExpense + category.amount           //caculate the total expense
         }
-        totalExpenseLabel.text = String(totalExpense) + " vnd"
+        totalExpenseLabel.text = String(totalExpense) + " vnd"      //display the total expense
     }
     
 

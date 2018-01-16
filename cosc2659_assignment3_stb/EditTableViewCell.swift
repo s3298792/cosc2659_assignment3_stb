@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+//class for creating the cells in the table view of the edit table view
 class EditTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!      
     @IBOutlet weak var amountTextField: UITextField!
     var delegate: CellDelegate?
     
@@ -27,7 +27,7 @@ class EditTableViewCell: UITableViewCell {
     
     @IBAction func nameTextFieldEditingDidEnd(_ sender: UITextField) {
         delegate!.nameTextFieldEditingDidEnd(cell: self, name: nameTextField.text!)
-    }
+    }               //allow to edit the nameTextField
     
     @IBAction func amountTextFieldEditingDidEnd(_ sender: UITextField) {
         delegate!.amountTextFieldEditingDidEnd(cell: self, amount: Int(amountTextField.text!)!)

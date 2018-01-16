@@ -8,6 +8,7 @@
 
 import UIKit
 
+//class for creating the cells in the table view of the home view
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
