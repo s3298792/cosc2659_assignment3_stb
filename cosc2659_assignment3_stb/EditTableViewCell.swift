@@ -8,7 +8,7 @@
 
 import UIKit
 //class for creating the cells in the table view of the edit table view
-class EditTableViewCell: UITableViewCell {
+class EditTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!      
     @IBOutlet weak var amountTextField: UITextField!
